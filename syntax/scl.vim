@@ -10,6 +10,11 @@ endif
 
 syn case ignore
 
+syn region sclif matchgroup=sclflow start="\<if\>" end="\<end_if\>"
+syn region sclfor matchgroup=sclflow start="\<for\>" end="\<end_for\>"
+
+syn match sclflow "\<\%(then\|elseif\|else\)\>" contained containedin=sclif
+
 syn keyword sclBoolean true false
 syn keyword sclConditional if else then case elsif
 syn keyword sclConditional end_if end_case
