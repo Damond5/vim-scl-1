@@ -10,10 +10,9 @@ endif
 
 syn case ignore
 
-syn region sclif matchgroup=sclflow start="\<if\>" end="\<end_if\>"
-syn region sclfor matchgroup=sclflow start="\<for\>" end="\<end_for\>"
-
-syn match sclflow "\<\%(then\|elseif\|else\)\>" contained containedin=sclif
+" Flow Control
+syn region  sclIfExpression     matchgroup=matlabFlowControl start="\<if\>"     end="\<end_if\>"
+syn match   sclFlowControl "\<\%(elseif\|else\)\>"    contained containedin=sclIfExpression
 
 syn keyword sclBoolean true false
 syn keyword sclConditional if else then case elsif
