@@ -8,6 +8,9 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 syn case ignore
 
 " Flow Control
@@ -127,3 +130,6 @@ if version >= 508 || !exists("did_scl_syn_inits")
 endif
 
 let b:current_syntax = "scl"
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
