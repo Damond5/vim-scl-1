@@ -11,7 +11,7 @@ endif
 syn case ignore
 
 " Flow Control
-syn region  sclIfExpression     matchgroup=matlabFlowControl start="\<if\>"     end="\<end_if\>"
+syn region  sclIfExpression     matchgroup=sclFlowControl start="\<if\>"     end="\<end_if\>"
 syn match   sclFlowControl "\<\%(elseif\|else\)\>"    contained containedin=sclIfExpression
 
 syn keyword sclBoolean true false
